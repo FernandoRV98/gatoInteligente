@@ -1,0 +1,25 @@
+<div class="centra" *ngIf="sino1==0">
+    <h1>{{texto1}}</h1>
+</div>
+
+<div class="centra1" *ngIf="sino1==1">
+    <div>
+        <h1>{{texto1}}</h1>
+    </div>
+    <div class="central1">
+        <mat-progress-spinner
+        class="example-margin"
+        [color]="color"
+        [mode]="mode"
+        [value]="value">
+        </mat-progress-spinner>
+    </div>
+</div>
+<div class="centra2" *ngIf="sino1==2">
+    <div>
+        <h1>{{texto1}}</h1>
+    </div>
+    <div>
+        <button (click)="cerrar()">Aceptar</button>
+    </div>
+</div>

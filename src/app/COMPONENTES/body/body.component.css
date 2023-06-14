@@ -1,41 +1,81 @@
-.game-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  table {
-    border-collapse: collapse;
-  }
-  
-  td {
-    padding: 0;
-  }
-  
-  button {
-    width: 80px;
-    height: 80px;
-    border: none;
-    outline: none;
-    font-size: 40px;
-    background-color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  button:hover {
-    background-color: #f0f0f0;
-  }
-  
-  button:disabled {
-    cursor: default;
-  }
-  
-  button.x {
-    color: #ff6f69;
-  }
-  
-  button.o {
-    color: #6ab04c;
-  }
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+
+td {
+  padding: 0;
+  margin: 0;
+  width: 100px;
+  height: 100px;
+  background-color: transparent;
+  text-align: center;
+  vertical-align: middle;
+}
+
+button {
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+}
+input{
+  border: 2px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 4em;
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  outline: none;
+  text-align: center;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+}
+
+/* Estilos para las celdas de "gato" */
+.cell-top-left, .cell-top-middle, .cell-top-right, 
+.cell-middle-left, .cell-middle-middle, .cell-middle-right, 
+.cell-bottom-left, .cell-bottom-middle, .cell-bottom-right {
+  border: none;
+}
+
+.cell-top-left input, .cell-top-middle input, .cell-top-right input, 
+.cell-middle-left input, .cell-middle-middle input, .cell-middle-right input, 
+.cell-bottom-left input, .cell-bottom-middle input, .cell-bottom-right input {
+  border-radius: 50%;
+}
+/*
+
+.cell-top-middle button, .cell-middle-left button, .cell-middle-middle button, 
+.cell-middle-right button, .cell-bottom-middle button {
+  border-top: none;
+  border-bottom: none;
+}
+
+.cell-top-left button, .cell-middle-left button, .cell-bottom-left button, 
+.cell-middle-middle button, .cell-bottom-middle button {
+  border-right: none;
+  border-left: none;
+}
+
+.cell-top-right button, .cell-middle-right button, .cell-bottom-right button, 
+.cell-middle-middle button, .cell-bottom-middle button {
+  border-left: none;
+  border-right: none;
+}
+
+.cell-bottom-left button, .cell-bottom-middle button, .cell-bottom-right button {
+  border-top: none;
+  border-bottom: none;
+}*/

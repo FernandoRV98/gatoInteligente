@@ -1,21 +1,19 @@
-<html>
-	<head>
-		<title>Menu Desplegable</title>
-	</head>
-	<body>
-		<div id="header">
-			<label >HOLAAAAAAAAAAAAAAAAAAAAA</label>
-			<label for="s1"><b>Quien tira primero? </b></label>
-			<select id="s1" (change)="seleccionado($event)">
-				<option value="0">Humano</option>
-				<option value="1">Maquina</option>
-				<option value="2">Aleatorio</option>
-
-			</select>
-			<ul class="nav">
-				<li><a href="">Inicio</a></li>
-				<li><a href="">Reiniciar</a></li>
-			</ul>
-		</div>
-	</body>
-</html>
+<div class="container">
+	<h1 class="title">
+		<span class="g">G</span>
+		<span class="a">&#9650;</span>
+		<span class="t">T</span>
+		<span class="o">&#9679;</span>
+	  </h1>	  
+	<label for="turn" class="how">¿Quién empieza?</label>
+	<select id="turn" (change)="turno($event)" [disabled]="svf">
+		<option value="0">{{opciones[0]}}</option>
+		<option value="1">{{opciones[1]}}</option>
+		<option value="2">{{opciones[2]}}</option>
+	</select>
+	<div class="buttons">
+	  <button class="start-btn" id="inifin" [disabled]="g" (click)="enviar()">{{opciones[cnb]}}</button>
+	  
+	</div>
+  </div>
+  

@@ -1,4 +1,35 @@
-<div><app-header></app-header></div>
-<div><app-body></app-body></div>
-<div><app-foots></app-foots></div>
 
+
+<div>
+    <app-header
+    (va)="metodopadre($event)"
+    (va)="gato.limpiar()"
+    (va)="gato.ver()" #menu
+    (va)="gato.reinicioEmergencia()">
+    </app-header>
+</div>
+<br>
+<div>
+    <app-body
+    [vson]="rjsn"
+    [vjug]="rjug"
+    [inicio]="inicio"
+    [contador]="Rescj"
+    #gato 
+    (evbody)="metodopadreB($event)">
+    </app-body>
+</div>
+<br>
+<div>
+    <app-foots
+    [jp]="rcjp"
+    [contH]="chombre"
+    [contM]="cmaquina"
+    [contE]="cempate" >
+    </app-foots>
+</div>
+
+
+<!--
+<app-ejemplo1></app-ejemplo1>
+-->

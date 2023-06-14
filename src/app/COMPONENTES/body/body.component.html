@@ -1,23 +1,24 @@
-<br>
-<br>
-<br>
 
 <div class="game-container">
-    <table>
-      <tr>
-        <td><button>E</button></td>
-        <td><button>E</button></td>
-        <td><button>E</button></td>
-      </tr>
-      <tr>
-        <td><button>X</button></td>
-        <td><button>X</button></td>
-        <td><button>X</button></td>
-      </tr>
-      <tr>
-        <td><button>B</button></td>
-        <td><button>B</button></td>
-        <td><button>B</button></td>
-      </tr>
-    </table>
-  </div>
+  <table>
+		<tr>
+			<td class="cell-top-left"><input id="0" type="text" [value]="limpiando[0]" (click)="contenido1($event)" [disabled]="tf" readonly></td>
+			<td class="cell-top-middle"><input id="1" type="text" [value]="limpiando[1]" (click)="contenido1($event)" [disabled]="tf" readonly></td>
+			<td class="cell-top-right"><input id="2" type="text" [value]="limpiando[2]" (click)="contenido1($event)" [disabled]="tf" readonly></td>
+		</tr>
+		<tr>
+			<td class="cell-middle-left"><input id="3" type="text" [value]="limpiando[3]" (click)="contenido1($event)" [disabled]="tf" readonly></td>
+			<td class="cell-middle-middle"><input id="4" type="text" [value]="limpiando[4]" (click)="contenido1($event)" [disabled]="tf" readonly></td>
+			<td class="cell-middle-right"><input id="5" type="text" [value]="limpiando[5]" (click)="contenido1($event)" [disabled]="tf" readonly></td>
+		</tr>
+		<tr>
+			<td class="cell-bottom-left"><input id="6" type="text" [value]="limpiando[6]" (click)="contenido1($event)" [disabled]="tf" readonly></td>
+			<td class="cell-bottom-middle"><input id="7" type="text" [value]="limpiando[7]" (click)="contenido1($event)" [disabled]="tf" readonly></td>
+			<td class="cell-bottom-right"><input id="8" type="text" [value]="limpiando[8]" (click)="contenido1($event)" [disabled]="tf" readonly></td>
+		</tr>
+	</table>
+	<div>
+		
+	</div>
+</div>
+
