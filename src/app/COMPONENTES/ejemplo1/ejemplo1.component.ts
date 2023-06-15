@@ -18,8 +18,8 @@ export class Ejemplo1Component implements OnInit {
   txt: string = '';
   //Se gener auna instancia que adopta las propiedades de la interfaz 'Auto' y otra de la interfaz Clase1
   autoArray: Auto[] = [{ noSerie: 'TKDI55', marca: 'TOSHIBA', modelo: 'TX600', color: 'AZUL', costo: 35000},
-  { noSerie: 'TKDI56', marca: 'TOSHIBA', modelo: 'TX600', color: 'AZUL', costo: 35000},
-  { noSerie: 'TKDI57', marca: 'TOSHIBA', modelo: 'TX600', color: 'AZUL', costo: 35000},
+  { noSerie: 'TKDI56', marca: 'TASHIDA', modelo: 'TX600', color: 'AZUL', costo: 35000},
+  { noSerie: 'TKDI57', marca: 'MITZUBISHI', modelo: 'TX600', color: 'AZUL', costo: 35000},
   { noSerie: 'TKDI58', marca: 'TOSHIBA', modelo: 'TX600', color: 'AZUL', costo: 35000},
   { noSerie: 'TKDI59', marca: 'TOSHIBA', modelo: 'TX600', color: 'AZUL', costo: 35000},];
   alumnoArray: Alumno[] = [
@@ -231,6 +231,11 @@ export class Ejemplo1Component implements OnInit {
     //si el numero es primo, se devuelve true
     //si el numero no es primo, se devuelve false
   }
+  esPrimo2 (numero: number): boolean {
+    return numero<=1 ? false :  Array.from(Array(numero).keys()).filter(x => x>1 && x<numero).every(x => numero%x!=0); 
+  }
+
+  
   //Ejemplo 5:
   contarCaracteres(palabras: string[]): number{
     return palabras.reduce((acumulador, palabra) => acumulador + palabra.length, 0);
@@ -240,6 +245,16 @@ export class Ejemplo1Component implements OnInit {
     //si el arreglo de palabras esta vacio, se devuelve 0
 
   }
+  contarCaracteres2(palabras: string[]): number{
+    return palabras.map(x => x.length).reduce((acumulador, palabra) => acumulador + palabra, 0);
+    //el metodo map devuelve un nuevo arreglo con los elementos transformados
+    //en este caso se devuelve un nuevo arreglo con la longitud de cada palabra
+    //el metodo reduce reduce los elementos de un arreglo a un solo valor
+    //en este caso se reduce el arreglo de longitudes a un solo valor, en este caso la cantidad de caracteres
+    //luego se devuelve la cantidad de caracteres
+    //si el arreglo de palabras esta vacio, se devuelve 0
+  }
+
 
 
 
