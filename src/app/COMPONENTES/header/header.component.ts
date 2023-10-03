@@ -31,6 +31,19 @@ export class HeaderComponent {
     const dialogRef = this.mensaje.open(MensajeComponent, {width: '155px', height: '180px',
     disableClose: true,data:{sino:0, texto:'Comienza el juego'}});
   }
+
+  //CODIGO REDUCIDO
+  enviar(){
+    this.g=true;
+    this.inifin==0? (console.log("inicia"), this.openDialog(), this.inifin=1, this.cnb=6, this.svf=true, this.cm++) : (console.log("termina"), this.inifin=0, this.rconteo=0, this.cnb=3, this.svf=false);
+    this.jug==1? this.inicio=11 : this.inicio=12;
+    this.vei=[this.inifin,this.cm,this.jug,this.inicio,this.rconteo];
+    this.va.emit(this.vei);
+    this.cierra();
+  }
+
+
+  /*
   enviar(){
     this.g=true;
     if(this.inifin==0){
@@ -56,11 +69,9 @@ export class HeaderComponent {
     this.va.emit(this.vei); //se envia el paquete de datos al padre
     this.cierra(); 
   }
+  */
   cierra(){
-    setTimeout(() => {
-      this.mensaje.closeAll();
-      this.g=false;
-    },1500);
+    setTimeout(() => { this.mensaje.closeAll(); this.g=false; },1500);
   }
   turno(e: Event){ //metodo para seleccionar el jugador
     this.jug=(parseInt((e.target as HTMLInputElement).value));
